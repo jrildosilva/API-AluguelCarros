@@ -12,7 +12,7 @@ categoriesRoutes.post("/", (request, response) => {
     const categoryAlreadExists = categoriesRepository.findByName(name);
 
     if(categoryAlreadExists) {
-        return response.status(400).json({error: "Rildo, revisar javascript: find, list, e contructor"})
+        return response.status(400).json({error: "Category Already exists!"});
     }
     
     categoriesRepository.create({ name, description });
