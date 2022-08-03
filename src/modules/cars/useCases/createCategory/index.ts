@@ -4,7 +4,7 @@ import { CreateCategoryUseCase } from "./CreateCategoryUseCase";
 
 
 
-const categoriesRepository = new CategoriesRepository();
+const categoriesRepository = CategoriesRepository.getInstance();
 
 const createcategoryUsecase = new CreateCategoryUseCase
 (categoriesRepository);
